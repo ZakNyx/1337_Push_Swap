@@ -28,6 +28,8 @@ FILES = ./push_swap_utils/*.c \
 # Colors
 C_RED = \033[1;31m
 C_GREEN = \033[1;32m
+:q
+
 C_L_BLUE = \033[1;34m
 C_RES = \033[0m
 
@@ -35,7 +37,7 @@ C_RES = \033[0m
 all : $(NAME)
 
 $(NAME) : $(FILES)
-	$(CC) $(CFLAGS) $(FILES) -o $(NAME) 
+	$(CC) $(FILES) -o $(NAME) 
 	@echo "$(C_GREEN)[LIBRARY CREATED!]$(C_RES)"
 
 clean:

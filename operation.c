@@ -38,18 +38,61 @@ void	ft_rrx(t_list **stack)
 	t_list	*fst;
 	t_list	*lst;
 
-	if(!(*stk)->next)
+	if(!(*stack)->next)
 		return ;
 	temp = *stack;
 	lst = *stack;
 	while(temp->next)
 	{
-		if(!tmp->next->next)
+		if(!temp->next->next)
 			lst = tmp;
-		tmp = tmp->next;
+		temp = temp->next;
 	}
 	fst = temp;
 	fst->next = *stack;
 	lst->next = NULL;
-	*stack = first
+	*stack = fst;
+}
+
+t_list *new_node(int nb)
+{
+	t_list *node;
+
+	if (!(node = (t_list *)malloc(sizeof(t_list))))
+		return (0);
+	node->nbr = nb;
+	node->next = 0;
+	return (node);
+}
+
+int push(t_list **stack, int elem)
+{
+	t_list *new;
+
+	if (!stack)
+		return (0);
+	if (!*stack)
+	{
+		if (!(*stack = new_node(elem)))
+			return (0);
+		return (1);
+	}
+	if (!(new = new_node(elem)))
+		return (0);
+	new->next = *stack;
+	*stack = new;
+	return (1);
+}
+
+t_list *pop(t_list **stack)
+{
+	t_list *node;
+
+	node = 0;
+	if (!stack || !*stack)
+		return (0);
+	node = *stack;
+	*stack = (*stack)->next;
+	node->next = NULL;
+	return (node);
 }

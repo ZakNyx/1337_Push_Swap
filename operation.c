@@ -45,7 +45,7 @@ void	ft_rrx(t_list **stack)
 	while(temp->next)
 	{
 		if(!temp->next->next)
-			lst = tmp;
+			lst = temp;
 		temp = temp->next;
 	}
 	fst = temp;
@@ -60,7 +60,7 @@ t_list *new_node(int nb)
 
 	if (!(node = (t_list *)malloc(sizeof(t_list))))
 		return (0);
-	node->nbr = nb;
+	node->num = nb;
 	node->next = 0;
 	return (node);
 }

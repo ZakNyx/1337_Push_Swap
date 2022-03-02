@@ -6,11 +6,11 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:38:41 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/02 13:38:48 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/02 18:30:34 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static long	ft_check(const char *str, int i, int n)
 {

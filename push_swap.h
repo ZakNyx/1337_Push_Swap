@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/02 13:41:14 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/02 18:33:34 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@
 
 typedef struct  s_list
 {
-    int		num;
+    int	num;
     struct s_list *next;
 }               t_list;
 
+        /*  Operations  */
 void	ft_sx(t_list *stack);
 void	ft_rx(t_list **stack);
 void	ft_rrx(t_list **stack);
@@ -34,15 +35,9 @@ int     push(t_list **stack, int elem);
 t_list  *pop(t_list **stack);
 
 
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void *content);
-int	ft_atoi(const char *str);
+        /*	Utils	*/
+int     ft_atoi(const char *str);
+char	**ft_split(char const *s, char c);
+
 
 #endif

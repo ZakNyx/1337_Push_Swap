@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/02/20 19:07:24 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/02 13:39:06 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ RM = @rm -rf
 
 CFLAGS = -Wall -Werror -Wextra 
 
-FILES = ./push_swap_utils/*.c \
+FILES = ft_atoi.c \
+		operation.c \
 		push_swap.c
 		
 #FILES_B = 
@@ -28,8 +29,6 @@ FILES = ./push_swap_utils/*.c \
 # Colors
 C_RED = \033[1;31m
 C_GREEN = \033[1;32m
-:q
-
 C_L_BLUE = \033[1;34m
 C_RES = \033[0m
 

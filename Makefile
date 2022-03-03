@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/02 18:31:09 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/03 15:10:33 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ RM = @rm -rf
 CFLAGS = -Wall -Werror -Wextra 
 
 FILES = ./push_swap_utils/ft_atoi.c \
-		./push_swap_utils/ft_split.c \
 		operation.c \
 		push_swap.c
 		

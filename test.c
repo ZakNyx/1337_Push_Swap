@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int ft_operations
+int main(int ac, char **av)
 {
-    
+    printf("%c", av[1][0]);
 }

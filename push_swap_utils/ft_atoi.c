@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:38:41 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/02 18:30:34 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/04 17:34:46 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static long	ft_check(const char *str, int i, int n)
 		result = 10 * result + (str[n] - '0');
 		n++;
 	}
+	if (!(str[n] >= '0' && str[n] <= '9') && str[n] != '\0')
+		error();
 	return (result * i);
 }
 

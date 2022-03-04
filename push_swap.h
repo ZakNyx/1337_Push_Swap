@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/02 18:33:34 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/04 17:34:12 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,12 @@ void	ft_rrx(t_list **stack);
 t_list *new_node(int nb);
 int     push(t_list **stack, int elem);
 t_list  *pop(t_list **stack);
+int	ft_isdigit(char c);
 
 
         /*	Utils	*/
 int     ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
-
+void	error(void);
 
 #endif

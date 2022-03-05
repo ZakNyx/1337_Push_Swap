@@ -6,14 +6,13 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/03 15:10:33 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/05 19:24:41 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-#NAME_B = so_long_bonus 
-
+# DONT FORGET TO ADD THE FLAGS AT THE END 
 CC = gcc 
 
 RM = @rm -rf
@@ -21,7 +20,11 @@ RM = @rm -rf
 CFLAGS = -Wall -Werror -Wextra 
 
 FILES = ./push_swap_utils/ft_atoi.c \
-		operation.c \
+		./push_swap_utils/opA.c \
+		./push_swap_utils/opB.c \
+		./push_swap_utils/operation.c \
+		./push_swap_utils/checker.c \
+		./push_swap_utils/algo1.c \
 		push_swap.c
 		
 #FILES_B = 

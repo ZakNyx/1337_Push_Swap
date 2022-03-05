@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/04 17:34:12 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/05 20:03:34 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,34 @@ typedef struct  s_list
     struct s_list *next;
 }               t_list;
 
+typedef struct s_stack
+{
+        t_list  *top;
+}               t_stack;
+
         /*  Operations  */
 void	ft_sx(t_list *stack);
+void    sa(t_list **elem);
+void    sb(t_list **elem);
 void	ft_rx(t_list **stack);
+void    ra(t_list **elem);
+void    rb(t_list **elem);
 void	ft_rrx(t_list **stack);
+void    rra(t_list **elem);
+void    rrb(t_list **elem);
 t_list *new_node(int nb);
 int     push(t_list **stack, int elem);
 t_list  *pop(t_list **stack);
-int	ft_isdigit(char c);
 
+        /*      Checker       */
+int	ft_isdigit(char c);
+void	ft_digit(int ac, char **av);
+int	ft_isdouble(int ac, char **av);
+void	error(void);
 
         /*	Utils	*/
 int     ft_atoi(const char *str);
-char	**ft_split(char const *s, char c);
-void	error(void);
+void	sort_2(int ac, char **av, t_list **elem);
+void	sort_3(int ac, char **av, t_list **elem1);
 
 #endif

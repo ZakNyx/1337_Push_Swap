@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_sx(t_list *stack)
 {
@@ -11,7 +11,6 @@ void	ft_sx(t_list *stack)
 	n2 = stack->next;
 	if(!n1 || !n2)
 		return ;
-	printf("sa\n");
 	temp = n1->num;
 	n1->num = n2->num;
 	n2->num = temp;
@@ -83,17 +82,6 @@ int push(t_list **stack, int elem)
 	new->next = *stack;
 	*stack = new;
 	return (1);
-}
-
-t_list	*ft_lstlast(t_list *lst)
-{
-	while (lst != NULL)
-	{
-		if (lst->next == NULL)
-			return (lst);
-		lst = lst->next;
-	}
-	return (0);
 }
 
 t_list *pop(t_list **stack)

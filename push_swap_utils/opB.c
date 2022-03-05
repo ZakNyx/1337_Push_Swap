@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   opB.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 19:45:10 by zihirri           #+#    #+#             */
-/*   Updated: 2022/02/20 19:00:45 by zihirri          ###   ########.fr       */
+/*   Created: 2022/03/05 19:04:03 by zihirri           #+#    #+#             */
+/*   Updated: 2022/03/05 19:04:27 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void    sb(t_list **elem)
 {
-	int	i;
+    ft_sx(*elem);
+    write(1, "sb\n", 3);
+}
 
-	i = 0;
-	if (!del || !lst || !*lst)
-		return ;
-	while (lst[i])
-	{
-		del(lst[i]->content);
-		free(lst[i]);
-		lst[i] = lst[i]->next;
-	}
+void    rb(t_list **elem)
+{
+    ft_rx(elem);
+    write(1, "rb\n", 3);
+}
+
+void    rrb(t_list **elem)
+{
+    ft_rrx(elem);
+    write(1, "rrb\n", 4);
 }

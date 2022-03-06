@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/05 20:03:34 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/06 17:44:32 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ void    rra(t_list **elem);
 void    rrb(t_list **elem);
 t_list *new_node(int nb);
 int     push(t_list **stack, int elem);
-t_list  *pop(t_list **stack);
+t_list  *ft_pop(t_list **stack);
+void    pa(t_list **stack1, t_list *stack2, int elem);
+void    pb(t_list **stack1, t_list *stack2, int elem);
 
         /*      Checker       */
 int	ft_isdigit(char c);
@@ -54,6 +56,8 @@ void	error(void);
         /*	Utils	*/
 int     ft_atoi(const char *str);
 void	sort_2(int ac, char **av, t_list **elem);
-void	sort_3(int ac, char **av, t_list **elem1);
-
+void	sort_3(t_list **lst);
+void	sort_5(int ac, char **av, t_list **stack, t_list **stack2);
+int	find_min(t_list *stack);
+int	find_max(t_list *stack);
 #endif

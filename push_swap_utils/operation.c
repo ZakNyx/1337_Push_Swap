@@ -84,7 +84,7 @@ int push(t_list **stack, int elem)
 	return (1);
 }
 
-t_list *pop(t_list **stack)
+t_list *ft_pop(t_list **stack)
 {
 	t_list *node;
 

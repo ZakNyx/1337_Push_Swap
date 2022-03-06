@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/05 19:24:41 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/06 15:07:34 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/operation.c \
 		./push_swap_utils/checker.c \
 		./push_swap_utils/algo1.c \
+		./push_swap_utils/utils.c \
 		push_swap.c
 		
 #FILES_B = 

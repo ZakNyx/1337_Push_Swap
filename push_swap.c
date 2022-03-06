@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:57:56 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 17:58:42 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/06 19:45:09 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ int main(int ac, char **av)
 			// sort_2(ac, av, &elem1);
 			//sort_3(&elem1);
 			sort_5(ac, av, &elem1, &elem2);
-			// while (elem1)
-			// {
-			// 	printf("stack 1 = %d\n", elem1->num);
-			// 	elem1 = elem1->next;
-			// }
+			while (elem1)
+			{
+				printf("stack 1 = %d\n", elem1->num);
+				elem1 = elem1->next;
+			}
 	}
 }

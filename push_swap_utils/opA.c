@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 18:50:02 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 17:31:18 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/06 19:42:32 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void    rra(t_list **elem)
     write(1, "rra\n", 4);
 }
 
-// void    pa(t_list **stack1, t_list *stack2, int elem)
-// {
-//     push(stack2, elem);
-//     ft_pop(stack1);
-//     write(1, "pb\n", 3);
-// }
+void    pa(t_list **stack1, t_list **stack2, int elem)
+{
+    push(stack1, elem);
+    ft_pop(stack2);
+    write(1, "pa\n", 3);
+}

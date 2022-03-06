@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   opB.c                                              :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 19:04:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 19:42:27 by zihirri          ###   ########.fr       */
+/*   Created: 2021/11/11 01:58:37 by zihirri           #+#    #+#             */
+/*   Updated: 2022/03/06 19:26:23 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    sb(t_list **elem)
+int	ft_lstsize(t_list *stack)
 {
-    ft_sx(*elem);
-    write(1, "sb\n", 3);
-}
+	int	i;
 
-void    rb(t_list **elem)
-{
-    ft_rx(elem);
-    write(1, "rb\n", 3);
-}
-
-void    rrb(t_list **elem)
-{
-    ft_rrx(elem);
-    write(1, "rrb\n", 4);
-}
-
-void    pb(t_list **stack1, t_list **stack2, int elem)
-{
-    push(stack2, elem);
-    ft_pop(stack1);
-    write(1, "pb\n", 3);
+	i = 0;
+	while (stack != NULL)
+	{
+		stack = stack->next;
+		i++;
+	}
+	return (i);
 }

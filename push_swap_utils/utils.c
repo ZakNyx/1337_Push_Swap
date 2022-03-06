@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:07:46 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 15:13:42 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/06 19:21:19 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	find_min(t_list *stack)
         stack = stack->next;
         i++;
     }
-    return (min);
+    return (index);
 }
 
 int	find_max(t_list *stack)

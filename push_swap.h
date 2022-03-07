@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 19:37:28 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/07 18:32:59 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,12 @@ void	error(void);
 
         /*	Utils	*/
 int     ft_atoi(const char *str);
-void	sort_2(int ac, char **av, t_list **elem);
+void	sort_2(t_list **elem);
 void	sort_3(t_list **lst);
-void	sort_5(int ac, char **av, t_list **stack, t_list **stack2);
+void	sort_5(t_list **stack, t_list **stack2);
 int	find_min(t_list *stack);
 int	find_max(t_list *stack);
 int	ft_lstsize(t_list *stack);
+void    tab(t_list **stack, int ac);
+
 #endif

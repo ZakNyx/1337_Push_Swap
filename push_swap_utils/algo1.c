@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:30:08 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/06 19:43:29 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/07 16:54:31 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,10 @@
 // 		if 
 // 	}
 // }
-void	sort_2(int ac, char **av, t_list **elem)
+void	sort_2(t_list **lst)
 {
-	int i;
-	
-	i = ac - 1;
-	if(ac == 3)
-	{
-		if (ft_atoi(av[i]) < ft_atoi(av[i - 1]))
-			sa(elem);
-	}
+		if ((*lst)->num > (*lst)->next->num)
+			sa(lst);
 }
 
 static void sort3_helper(t_list **lst)
@@ -40,16 +34,13 @@ static void sort3_helper(t_list **lst)
         && ((*lst)->next->num > (*lst)->next->next->num)
         && ((*lst)->num > (*lst)->next->next->num))
     {
-        write(1, "rra\n", 4);
         rra(lst);
     }
     else if (((*lst)->num < (*lst)->next->num)
         && ((*lst)->next->num > (*lst)->next->next->num)
         && ((*lst)->num < (*lst)->next->next->num))
     {
-        write(1, "rra\n", 4);
         rra(lst);
-        write(1, "sa\n", 3);
         sa(lst);
     }
 }
@@ -59,17 +50,13 @@ void    sort_3(t_list **lst)
     if (((*lst)->num > (*lst)->next->num)
         &&((*lst)->next->num > (*lst)->next->next->num))
     {
-        write(1, "sa\n", 3);
         sa(lst);
-        write(1, "rra\n", 4);
         rra(lst);
     }
     else if (((*lst)->num > (*lst)->next->num)
         && ((*lst)->next->num < (*lst)->next->next->num)
         && ((*lst)->num > (*lst)->next->next->num))
     {
-        write(1, "rra\n", 4);
-        write(1, "rra\n", 4);
         rra(lst);
         rra(lst);
     }
@@ -77,13 +64,12 @@ void    sort_3(t_list **lst)
         && ((*lst)->next->num < (*lst)->next->next->num)
         && ((*lst)->num < (*lst)->next->next->num))
     {
-        write(1, "sa\n", 3);
         sa(lst);
     }
     sort3_helper(lst);
 }
 
-void	sort_5(int ac, char **av, t_list **stack, t_list **stack2)
+void	sort_5(t_list **stack, t_list **stack2)
 {
 	int	i;
 	int m;
@@ -109,15 +95,10 @@ void	sort_5(int ac, char **av, t_list **stack, t_list **stack2)
                     m--;
                 }
             }
-            push(stack2, (*stack)->num);
-			ft_pop(stack);
-			write(1, "pb\n", 3);
+            pb(stack, stack2, (*stack)->num);
 			i++;
 		}
 		sort_3(stack);	
-		// push(stack, (*stack2)->num);
-		// ft_pop(stack2);
-		// write(1, "pa\n", 3);
         pa(stack, stack2, (*stack2)->num);
         pa(stack, stack2, (*stack2)->num);
 			// while (*stack2)

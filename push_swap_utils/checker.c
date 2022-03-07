@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:26:51 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/05 19:23:19 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/07 20:00:24 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,9 @@ int	ft_isdouble(int ac, char **av)
 		while (j > 0)
 		{
 			if (ft_atoi(av[i]) == ft_atoi(av[j]))
+			{
 				return (0);
+			}
 			j--;
 		}
 		i--;

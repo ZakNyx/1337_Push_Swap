@@ -6,22 +6,12 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:30:08 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/07 16:54:31 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/08 16:13:17 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-// int	min(t_list *stack)
-// {	
-// 	int min;
-
-// 	min = 0;
-// 	while(stack->num)
-// 	{
-// 		if 
-// 	}
-// }
 void	sort_2(t_list **lst)
 {
 		if ((*lst)->num > (*lst)->next->num)
@@ -69,41 +59,43 @@ void    sort_3(t_list **lst)
     sort3_helper(lst);
 }
 
-void	sort_5(t_list **stack, t_list **stack2)
+void sort_5(t_list **stack1, t_list **stack2)
 {
-	int	i;
-	int m;
+    int min;
+    int i;
+    int size;
+    int n;
 
-	i = 0;
-
-		while (i < 2)
-		{
-			m = find_min(*stack);
-            if (m >= ft_lstsize(*stack) / 2)
+    size = ft_lstsize(*stack1);
+    i = 0;
+    n = size;
+    while (i < n - 3)
+    {
+        min = find_min(*stack1);
+        if (min >= (size / 2))
+        {
+            while (min <= (size - 1))
             {
-                while (m <= ft_lstsize(*stack) - 1)
-                {
-                    rra(stack);
-                    m++;
-                }
+                rra(stack1);
+                min++;
             }
-            else
+        }
+        else
+        {
+            while (min != 0)
             {
-                while (m != 0)
-                {
-                    ra(stack);
-                    m--;
-                }
+                ra(stack1);
+                min--;
             }
-            pb(stack, stack2, (*stack)->num);
-			i++;
-		}
-		sort_3(stack);	
-        pa(stack, stack2, (*stack2)->num);
-        pa(stack, stack2, (*stack2)->num);
-			// while (*stack2)
-			// {
-			// 	printf("stack b %d\n", (*stack2)->num);
-			// 	*stack2 = (*stack2)->next;
-			// }
+        }
+        pb(stack1, stack2, (*stack1)->num);
+        size--;
+        i++;
+    }
+    sort_3(stack1);
+    while (n > 3)
+    {
+        pa(stack1, stack2, (*stack2)->num);
+        n--;
+    }
 }

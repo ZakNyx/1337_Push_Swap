@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/08 22:30:06 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/10 17:43:44 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	find_max(t_list *stack);
 int	ft_lstsize(t_list *stack);
 void    tab(t_list **stack, int ac);
 void    sort_100(t_list **stack1, t_list **stack2);
+void    complex_sort(t_list    **a, t_list **b, int s);
 
 
 #endif

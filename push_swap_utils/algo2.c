@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:17:49 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/08 23:08:17 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/10 18:50:50 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,8 @@ void	index_stack(int *a, t_list **stack1, int size)
 			}
 			i++;
 		}
-		// printf("num = %d\n",(*stack)->num);
 		(stack) = (stack)->next;
 	}
-			// while(*stack1)
-			// {
-			// 	printf("%d\n", (*stack1)->num);
-			// 	(*stack1) = (*stack1)->next;
-			// }
 }
 
 void	tab(t_list **stack, int ac)
@@ -82,7 +76,6 @@ void	tab(t_list **stack, int ac)
 	bubblesort(arr, ft_lstsize(*stack));
 	// i = 0;
     // for (i=0; i < ft_lstsize(*stack); i++)
-    //     printf("%d ", arr[i]);
-	index_stack(arr, stack, ft_lstsize(*stack));
-			
+    //     printf("%d\n", arr[i]);
+	index_stack(arr, stack, ft_lstsize(*stack));	
 }

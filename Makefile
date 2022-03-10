@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/08 20:59:30 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/10 19:55:56 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC = gcc
 
 RM = @rm -rf
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS =  -fsanitize=address
 
 FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/opA.c \
@@ -43,7 +43,7 @@ C_RES = \033[0m
 all : $(NAME)
 
 $(NAME) : $(FILES)
-	$(CC) $(FILES) -o $(NAME) 
+	$(CC) $(CFLAGS) $(FILES) -o $(NAME) 
 	@echo "$(C_GREEN)[LIBRARY CREATED!]$(C_RES)"
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:57:56 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/08 23:07:51 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/10 19:05:56 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ int main(int ac, char **av)
     t_list *stack1;
 	t_list *stack2;
     int c;
+	int i;
 
+	i = 0;
 	if(ac > 2)
 	{
 		c = ac - 1;
@@ -40,13 +42,18 @@ int main(int ac, char **av)
 				push(&stack1, ft_atoi(av[c]));
 			c--;
 		}
-			tab(&stack1, ac);
-			sort_100(&stack1, &stack2);
-			//sort(ac, &stack1, &stack2);
-			// while(stack1)
-			// {
-			// 	printf("%d\n", stack1->num);
-			// 	stack1 = stack1->next;
-			// }
+		tab(&stack1, ac);
+		sort_100(&stack1, &stack2);
+		//complex_sort(&stack1, &stack2, 100);
+
+		// 	i++;
+		// }
+		//sort(ac, &stack1, &stack2);
+		
+		// while(stack2)
+		// {
+		// 	printf("%d\n", stack2->num);
+		// 	stack2 = stack2->next;
+		// }
 	}
 }

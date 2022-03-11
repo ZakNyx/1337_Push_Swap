@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:57:56 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/11 21:01:03 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/11 21:23:22 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	is_sorted(t_list **stack)
 	t_list *tmp;
 
 	tmp = *stack;
-	while (tmp)
+	while (tmp->next != NULL)
 	{
 		if (tmp->num > tmp->next->num)
 			return (0);
@@ -58,19 +58,19 @@ int main(int ac, char **av)
 		ft_digit(ac, av);
 		while (c > 0)
 		{
-			// if (is_sorted(&stack1) == 1)
-			// 	exit(1);
 			if (ft_isdouble(ac, av) == 0 )
 				error();
 			else
-			{
 				push(&stack1, ft_atoi(av[c]));
-			}
 			c--;
 		}
 		if (is_sorted(&stack1) == 1)
 			exit(1);
 		sort(ac, &stack1, &stack2);
-		system("leaks push_swap");
+		while (stack1)
+		{
+			printf("%d\n", stack1->num);
+			stack1 = stack1->next;
+		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:07:46 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/08 21:55:03 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/11 19:32:41 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ int	find_max(t_list *stack)
         {
             max = stack->num;
             index = i;
+            //puts("ha anaa");
         }
         stack = stack->next;
         i++;
     }
-    return (max);
+    return (index);
 }

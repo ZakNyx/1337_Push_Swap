@@ -92,6 +92,7 @@ t_list *ft_pop(t_list **stack)
 	if (!stack || !*stack)
 		return (0);
 	node = *stack;
+	free(node);
 	*stack = (*stack)->next;
 	node->next = NULL;
 	return (node);

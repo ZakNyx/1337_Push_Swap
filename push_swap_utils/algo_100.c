@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 20:58:56 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/10 19:56:46 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/11 14:28:03 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	salam(t_list **stack1, t_list **stack2, int fst, int scnd_ind)
 			fst--;
 		}
 	}
-	// tmp = tmp->next;
+	//tmp = tmp->next;
 	push(stack2, tmp->num);
 	ft_pop(&tmp);
 	write(1, "pb\n", 3);
@@ -50,24 +50,30 @@ void	sort_100(t_list **stack1, t_list **stack2)
 	int index;
 	t_list *temp;
 
+	int i = 0;
 	index = 0;
 	temp = *stack1;
-	while (temp)
-	{
-		if (temp->num >= 0 && temp->num <= 19)
+	
+	while (i < 20)
+	{	
+		while (temp)
 		{
-			fst = index;
-			break;
+			if (temp->num >= 0 && temp->num <= 19)
+			{
+				fst = index;
+				break;
+			}
+			temp = temp->next;
+			index++;
 		}
-		temp = temp->next;
-		index++;
+		while (temp)
+		{
+			if (temp->num >= 0 && temp->num <= 19)
+				scnd = index;
+			temp = temp->next;
+			index++;
+		}
+		salam(stack1, stack2, fst, scnd);
+		i++;
 	}
-	while (temp)
-	{
-		if (temp->num >= 0 && temp->num <= 19)
-			scnd = index;
-		temp = temp->next;
-		index++;
-	}
-	salam(stack1, stack2, fst, scnd);
 }

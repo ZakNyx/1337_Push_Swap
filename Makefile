@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/12 17:00:51 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/12 21:43:56 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/ft_lstsize.c \
 		./push_swap_utils/algo2.c \
 		./push_swap_utils/sort_big.c \
+		./push_swap_utils/push_pop.c \
 		push_swap.c
 		
 #FILES_B = 

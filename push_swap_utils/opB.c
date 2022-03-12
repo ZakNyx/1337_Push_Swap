@@ -6,33 +6,33 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 19:04:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/11 19:50:01 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/12 18:54:09 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    sb(t_list **elem)
+void	sb(t_list **elem)
 {
-    ft_sx(*elem);
-    write(1, "sb\n", 3);
+	ft_sx(*elem);
+	write(1, "sb\n", 3);
 }
 
-void    rb(t_list **elem)
+void	rb(t_list **elem)
 {
-    ft_rx(elem);
-    write(1, "rb\n", 3);
+	ft_rx(elem);
+	write(1, "rb\n", 3);
 }
 
-void    rrb(t_list **elem)
+void	rrb(t_list **elem)
 {
-    ft_rrx(elem);
-    write(1, "rrb\n", 4);
+	ft_rrx(elem);
+	write(1, "rrb\n", 4);
 }
 
-void    pb(t_list **stack1, t_list **stack2, int elem)
+void	pb(t_list **stack1, t_list **stack2, int elem)
 {
-    push(stack2, elem);
-    ft_pop(stack1);
-    write(1, "pb\n", 3);
+	push(stack2, elem);
+	ft_pop(stack1);
+	write(1, "pb\n", 3);
 }

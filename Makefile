@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/11 21:18:54 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/12 17:00:51 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,18 +17,18 @@ CC = gcc
 
 RM = @rm -rf
 
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra
 
 FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/opA.c \
 		./push_swap_utils/opB.c \
 		./push_swap_utils/operation.c \
-		./push_swap_utils/checker.c \
+		./push_swap_utils/util.c \
 		./push_swap_utils/algo1.c \
 		./push_swap_utils/utils.c \
 		./push_swap_utils/ft_lstsize.c \
 		./push_swap_utils/algo2.c \
-		./push_swap_utils/sort_100.c \
+		./push_swap_utils/sort_big.c \
 		push_swap.c
 		
 #FILES_B = 

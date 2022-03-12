@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_100.c                                         :+:      :+:    :+:   */
+/*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:06:52 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/11 20:58:11 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/12 19:03:52 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	find_first(t_list **stack1, int min, int max)
 	t_list	*tmp;
 	int		index;
 	int		first;
-	
+
 	tmp = *stack1;
 	first = -1;
 	index = 0;
@@ -29,7 +29,7 @@ int	find_first(t_list **stack1, int min, int max)
 			break ;
 		}
 		index++;
-		tmp = tmp->next;	
+		tmp = tmp->next;
 	}
 	return (first);
 }
@@ -57,12 +57,12 @@ void	swap(t_list **stack1, t_list **stack2, int index, int *size)
 
 void	push_back(t_list **stack1, t_list **stack2, int *size)
 {
-	t_list *tmp;
+	t_list	*tmp;
 	int		max;
 
 	tmp = (*stack2);
 	max = find_max(*stack2);
-	if (max > *size/ 2)
+	if (max > *size / 2)
 	{
 		while (max < *size)
 		{
@@ -78,11 +78,10 @@ void	push_back(t_list **stack1, t_list **stack2, int *size)
 			max--;
 		}
 	}
-	
 	pa(stack1, stack2, (*stack2)->num);
 }
 
-void	complex_sort(t_list **stack1, t_list **stack2, int size , int chunk)
+void	complex_sort(t_list **stack1, t_list **stack2, int size, int chunk)
 {
 	int		min;
 	int		max;
@@ -96,7 +95,7 @@ void	complex_sort(t_list **stack1, t_list **stack2, int size , int chunk)
 		if (i == -1)
 		{
 			min = min + max;
-			continue; 
+			continue ;
 		}
 		swap(stack1, stack2, i, &size);
 	}

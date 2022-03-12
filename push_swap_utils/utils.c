@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:07:46 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/11 19:32:41 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/12 19:08:21 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,44 @@
 
 int	find_min(t_list *stack)
 {
-    int	min;
-    int	index;
-    int	i;
+	int	min;
+	int	index;
+	int	i;
 
 	i = 0;
-    index = 0;
-    min = stack->num;
-    while (stack)
-    {
-        if (stack->num < min)
-        {
-            min = stack->num;
-            index = i;
-        }
-        stack = stack->next;
-        i++;
-    }
-    return (index);
+	index = 0;
+	min = stack->num;
+	while (stack)
+	{
+		if (stack->num < min)
+		{
+			min = stack->num;
+			index = i;
+		}
+		stack = stack->next;
+		i++;
+	}
+	return (index);
 }
 
 int	find_max(t_list *stack)
 {
-    int	max;
-    int	index;
-    int	i;
+	int	max;
+	int	index;
+	int	i;
 
 	i = 0;
-    index = 0;
-    max = stack->num;
-    while (stack)
-    {
-        if (stack->num > max)
-        {
-            max = stack->num;
-            index = i;
-            //puts("ha anaa");
-        }
-        stack = stack->next;
-        i++;
-    }
-    return (index);
+	index = 0;
+	max = stack->num;
+	while (stack)
+	{
+		if (stack->num > max)
+		{
+			max = stack->num;
+			index = i;
+		}
+		stack = stack->next;
+		i++;
+	}
+	return (index);
 }

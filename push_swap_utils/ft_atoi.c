@@ -6,11 +6,20 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 13:38:41 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/04 17:34:46 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/12 18:33:27 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ft_helper(const char *str, long result, int n, int i)
+{
+	if (!(str[n] >= '0' && str[n] <= '9') && str[n] != '\0')
+		error();
+	result = result * i;
+	if (result > 2147483647 || result <= -2147483648)
+		error();
+}
 
 static long	ft_check(const char *str, int i, int n)
 {
@@ -25,19 +34,18 @@ static long	ft_check(const char *str, int i, int n)
 		if (i == -1)
 		{
 			if ((precedes / 10) != result)
-				return (0);
+				error();
 		}
 		if (i == 1)
 		{
 			if ((precedes / 10) != result)
-				return (-1);
+				error();
 		}
 		result = 10 * result + (str[n] - '0');
 		n++;
 	}
-	if (!(str[n] >= '0' && str[n] <= '9') && str[n] != '\0')
-		error();
-	return (result * i);
+	ft_helper(str, result, n, i);
+	return (result);
 }
 
 int	ft_atoi(const char *str)

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:57:56 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/12 17:30:02 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/13 21:25:24 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,15 @@ int	main(int ac, char **av)
 	{
 		if (ft_isdigit(*av[1]) == 0)
 			error();
+		ft_atoi(av[1]);
 	}
-	else if (ac > 2)
+	if (ac > 2)
 	{
 		c = ac - 1;
 		ft_digit(ac, av);
+		ft_isdouble(av);
 		while (c > 0)
 		{
-			ft_isdouble(ac, av);
 			push(&stack1, ft_atoi(av[c]));
 			c--;
 		}

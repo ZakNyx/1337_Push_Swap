@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 19:26:51 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/12 19:05:39 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/13 21:14:46 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isdigit(char c)
 
 void	error(void)
 {
-	write(2, "Error\n", 7);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 
@@ -50,26 +50,21 @@ void	ft_digit(int ac, char **av)
 	}
 }
 
-int	ft_isdouble(int ac, char **av)
+void	ft_isdouble(char **av)
 {
 	int	i;
 	int	j;
 
-	i = ac - 1;
-	j = ac - 2;
-	while (i > 0)
+	i = 1;
+	while (av[i])
 	{
-		while (j > 0)
+		j = i + 1;
+		while (av[j])
 		{
-			if (i != j)
-			{
-				if (ft_atoi(av[i]) == ft_atoi(av[j]))
-					error();
-			}
-			j--;
+			if (ft_atoi(av[i]) == ft_atoi(av[j]))
+				error();
+			j++;
 		}
-		j = ac - 2;
-		i--;
+		i++;
 	}
-	return (1);
 }

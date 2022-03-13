@@ -6,18 +6,19 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/12 21:43:56 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/13 18:53:24 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-# DONT FORGET TO ADD THE FLAGS AT THE END 
+NAME_B = checker
+
 CC = gcc 
 
 RM = @rm -rf
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra 
 
 FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/opA.c \
@@ -32,7 +33,19 @@ FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/push_pop.c \
 		push_swap.c
 		
-#FILES_B = 
+FILES_B = ./checker_utils/checker_utils.c \
+			./checker_utils/get_next_line.c \
+			./checker_utils/opA.c \
+			./checker_utils/opB.c \
+			./checker_utils/operation.c \
+			./checker_utils/push_pop.c \
+			./push_swap_utils/ft_atoi.c \
+			./push_swap_utils/util.c \
+			./checker_utils/opX.c \
+			./push_swap_utils/opA.c \
+			./push_swap_utils/opB.c \
+			checker.c
+
 
 # Colors
 C_RED = \033[1;31m
@@ -47,13 +60,20 @@ $(NAME) : $(FILES)
 	$(CC) $(CFLAGS) $(FILES) -o $(NAME) 
 	@echo "$(C_GREEN)[LIBRARY CREATED!]$(C_RES)"
 
+bonus : $(NAME_B)
+
+$(NAME_B) : $(FILES_B)
+	$(CC) $(CFLAGS) $(FILES_B) -o $(NAME_B)
+	@echo "$(C_L_BLUE)[BONUS CREATED!]$(C_RES)"
+	
+
 clean:
-	${RM} push_swap.o
+	${RM} push_swap.o checker.o
 	@echo "$(C_RED)[OBJECT DELETED!]$(C_RES)"
 	
 
 fclean: clean
-	${RM} push_swap
+	${RM} push_swap checker
 	@echo "$(C_RED)[PROJECT.A REMOVED!]$(C_RES)"
 
 re: fclean all

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_utils.c                                    :+:      :+:    :+:   */
+/*   checker_utils_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 15:19:04 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/13 21:05:47 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/14 18:03:17 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	execute_operations(char *line, t_list **stack1, t_list **stack2)
 	if (!(ft_strcmp(line, "ss")))
 		return (ss(stack1, stack2));
 	if (!(ft_strcmp(line, "pa")))
-		return (checker_pa(stack1, stack2, (*stack2)->num));
+		return (checker_pa(stack1, stack2));
 	if (!(ft_strcmp(line, "pb")))
-		return (checker_pb(stack1, stack2, (*stack1)->num));
+		return (checker_pb(stack1, stack2));
 	if (!(ft_strcmp(line, "ra")))
 		return (checker_ra(stack1));
 	if (!(ft_strcmp(line, "rb")))
@@ -46,7 +46,7 @@ int	errors(char **line, t_list **stack1, t_list **stack2)
 		free_stuff(stack1);
 	if (*stack2)
 		free_stuff(stack2);
-	write(2, "Error\n", 7);
+	write(2, "Error\n", 6);
 	return (0);
 }
 
@@ -65,6 +65,8 @@ int	is_sorted(t_list **stack)
 	t_list	*tmp;
 
 	tmp = *stack;
+	if (tmp == NULL)
+		return (1);
 	while (tmp->next != NULL)
 	{
 		if (tmp->num > tmp->next->num)

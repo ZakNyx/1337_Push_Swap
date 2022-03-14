@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/20 19:04:13 by zihirri           #+#    #+#              #
-#    Updated: 2022/03/13 18:53:24 by zihirri          ###   ########.fr        #
+#    Updated: 2022/03/14 17:44:37 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 NAME_B = checker
 
-CC = gcc 
+CC = @gcc 
 
 RM = @rm -rf
 
@@ -33,18 +33,16 @@ FILES = ./push_swap_utils/ft_atoi.c \
 		./push_swap_utils/push_pop.c \
 		push_swap.c
 		
-FILES_B = ./checker_utils/checker_utils.c \
-			./checker_utils/get_next_line.c \
-			./checker_utils/opA.c \
-			./checker_utils/opB.c \
-			./checker_utils/operation.c \
-			./checker_utils/push_pop.c \
+FILES_B = ./checker_utils/checker_utils_bonus.c \
+			./checker_utils/get_next_line_bonus.c \
+			./checker_utils/opA_bonus.c \
+			./checker_utils/opB_bonus.c \
+			./checker_utils/operation_bonus.c \
+			./checker_utils/push_pop_bonus.c \
 			./push_swap_utils/ft_atoi.c \
 			./push_swap_utils/util.c \
-			./checker_utils/opX.c \
-			./push_swap_utils/opA.c \
-			./push_swap_utils/opB.c \
-			checker.c
+			./checker_utils/opX_bonus.c \
+			checker_bonus.c
 
 
 # Colors

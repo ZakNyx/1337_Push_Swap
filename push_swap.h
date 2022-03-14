@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:48:17 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/13 21:11:35 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/03/14 17:46:09 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,10 @@ void	ft_strdel(char **as);
 int		checker_sa(t_list **elem);
 int		checker_ra(t_list **elem);
 int		checker_rra(t_list **elem);
-int		checker_pa(t_list **stack1, t_list **stack2, int elem);
+int		checker_pa(t_list **stack1, t_list **stack2);
 int		checker_sb(t_list **elem);
 int		checker_rb(t_list **elem);
 int		checker_rrb(t_list **elem);
-int		checker_pb(t_list **stack1, t_list **stack2, int elem);
+int		checker_pb(t_list **stack1, t_list **stack2);
 
 #endif

@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   opB.c                                              :+:      :+:    :+:   */
+/*   opX_bonus.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 19:04:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/13 21:09:02 by zihirri          ###   ########.fr       */
+/*   Created: 2022/03/13 16:18:26 by zihirri           #+#    #+#             */
+/*   Updated: 2022/03/14 17:40:12 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	checker_sb(t_list **elem)
+int	ss(t_list **elem, t_list **elem2)
 {
-	ft_sx(*elem);
+	checker_sa(elem);
+	checker_sb(elem2);
 	return (0);
 }
 
-int	checker_rb(t_list **elem)
+int	rr(t_list **elem, t_list **elem2)
 {
-	ft_rx(elem);
+	checker_ra(elem);
+	checker_rb(elem2);
 	return (0);
 }
 
-int	checker_rrb(t_list **elem)
+int	rrr(t_list **elem, t_list **elem2)
 {
-	ft_rrx(elem);
-	return (0);
-}
-
-int	checker_pb(t_list **stack1, t_list **stack2, int elem)
-{
-	push(stack2, elem);
-	ft_pop(stack1);
+	checker_rra(elem);
+	checker_rrb(elem2);
 	return (0);
 }

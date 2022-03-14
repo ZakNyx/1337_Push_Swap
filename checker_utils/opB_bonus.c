@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   opX.c                                              :+:      :+:    :+:   */
+/*   opB_bonus.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 16:18:26 by zihirri           #+#    #+#             */
-/*   Updated: 2022/03/13 21:10:47 by zihirri          ###   ########.fr       */
+/*   Created: 2022/03/05 19:04:03 by zihirri           #+#    #+#             */
+/*   Updated: 2022/03/14 18:00:59 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ss(t_list **elem, t_list **elem2)
+int	checker_sb(t_list **elem)
 {
-	sa(elem);
-	sb(elem2);
+	if (*elem)
+		ft_sx(*elem);
 	return (0);
 }
 
-int	rr(t_list **elem, t_list **elem2)
+int	checker_rb(t_list **elem)
 {
-	ra(elem);
-	rb(elem2);
+	if (*elem)
+		ft_rx(elem);
 	return (0);
 }
 
-int	rrr(t_list **elem, t_list **elem2)
+int	checker_rrb(t_list **elem)
 {
-	rra(elem);
-	rrb(elem2);
+	if (*elem)
+		ft_rrx(elem);
+	return (0);
+}
+
+int	checker_pb(t_list **stack1, t_list **stack2)
+{
+	int	elem;
+
+	if (*stack1)
+	{
+		elem = (*stack1)->num;
+		push(stack2, elem);
+		ft_pop(stack1);
+	}
 	return (0);
 }
